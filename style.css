@@ -349,7 +349,7 @@ h1::after {
 
 #trnslist {
     list-style: none;
-    height: 310px;
+    max-height: 310px;
     overflow-y: auto;
     overflow-x: hidden;
     padding-right: 8px;
