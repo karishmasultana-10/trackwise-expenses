@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+
+
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="app-container">
+            <h1>Expense Tracker</h1>
+            <div id="top-controls">
+                <div id="filterbtn">
+                    <button id="all">All</button>
+                    <button id="income">Income</button>
+                    <button id="expenses">Expenses</button>
+                </div>
+
+            <input type="search" id="searchtrans" placeholder="Search transactions here...">
+        </div>
+            
+            <div id="dashboard">
+                <div class="card balance-card">
+                    <h2 id="balance">Balance Amount</h2>
+                    <p id="balance-display"></p>
+                </div>
+                <div class="card income-card">
+                    <h3 id="incomeh">Income</h3>
+                    <p id="income-display"></p>
+                </div>
+                <div class="card expense-card">
+                    <h3 id="expense">Expenses</h3>
+                    <p id="expenses-display"></p>
+                </div>
+    
+            </div>
+            <div id="pie-container">
+                <div id="piechart"></div>
+
+                <div id="chart-legend">
+                    <div class="legend-item">
+                        <span class="legend-color income-color"></span>
+                        <span>Income</span>
+                    </div>
+
+                    <div class="legend-item">
+                        <span class="legend-color expense-color"></span>
+                        <span>Expense</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="transaction-area">
+                <input id="transinpt" type="text" placeholder="Enter the transaction name">
+                <input id="transamt" type="number" placeholder="Enter the amount">
+                
+                <select id="transcategory">
+                    <option value="Food">Food</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Bills">Bills</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Others">Others</option>
+                </select>
+
+                <select id="transtype" >
+                    <option value="Income">Add Income</option>
+                    <option value="Expenses">Add Expenses</option>
+                </select>
+                <input id="transdate" type="date">
+            </div>
+            
+            <button id="addtrns">Add</button>
+            <ul id="trnslist"></ul>
+            <button id="clearall">Clear All</button>
+            <h4 id="totaldisplay">Total Transactions:</h4>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
