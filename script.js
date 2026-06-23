@@ -50,15 +50,13 @@ addbtn.onclick=function(event){
         return;
     }
 
-    for(let i=0;i<transaction.length;i++){
-        if(transVal.toLowerCase()===transaction[i].name.toLowerCase()){
-            alert("Stop adding duplicate transactions");
-            transinpt.value="";
-            transamnt.value="";
-            transdate.value="";
-            return;
-        }
+    for(let i = 0; i < transaction.length; i++) {
+    if(transVal.toLowerCase() === transaction[i].name.toLowerCase() &&
+        transaction[i].id !== editId) {
+        alert("Stop adding duplicate transactions");
+        return;
     }
+}
 
     let transObj={name:capitalizedTrans, amount:mathamnt, category:trans_cat, type:typeVal, date:usrdate, id:Date.now()};
     if(editId===null){
@@ -68,7 +66,7 @@ addbtn.onclick=function(event){
     else{
         for(let i=0;i<transaction.length;i++){
             if(transaction[i].id===editId){
-                transaction[i].name=transVal;
+                transaction[i].name=capitalizedTrans;
                 transaction[i].amount=mathamnt;
                 transaction[i].category=trans_cat;
                 transaction[i].type=typeVal;
